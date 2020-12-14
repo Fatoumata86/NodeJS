@@ -1,5 +1,3 @@
-const { dbinfo, Sequelize } = require("../database/db");
-
 module.exports = (dbinfo, Sequelize) => {
     return dbinfo.define(
         "serie", {
@@ -8,41 +6,37 @@ module.exports = (dbinfo, Sequelize) => {
                 primaryKey: true,
                 autoIncrement: true
             },
-            titre: {
+            nom: {
                 type: Sequelize.DataTypes.STRING(55),
-                allowNull: true
+                allowNull: false
             },
             saison: {
                 type: Sequelize.DataTypes.STRING(55),
-                allowNull: true
+                allowNull: false
             },
             episode: {
                 type: Sequelize.DataTypes.STRING(55),
-                allowNull: true
+                allowNull: false
             },
             duree: {
                 type: Sequelize.DataTypes.INTEGER,
-                allowNull: true
+                allowNull: false
             },
             synopsis: {
                 type: Sequelize.DataTypes.TEXT,
-                allowNull: true
+                allowNull: false
             },
             annee: {
                 type: Sequelize.DataTypes.INTEGER(4),
-                allowNull: true
+                allowNull: false
             },
             langue: {
                 type: Sequelize.DataTypes.STRING(55),
-                allowNull: true
-            },
-            version: {
-                type: Sequelize.DataTypes.STRING(55),
-                allowNull: true
+                allowNull: false
             },
             sousTitre: {
                 type: Sequelize.DataTypes.STRING(55),
-                allowNull: true
+                allowNull: false
             },
         }, {
             timestamps: true,

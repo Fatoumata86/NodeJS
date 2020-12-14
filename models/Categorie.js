@@ -1,7 +1,3 @@
-const { Sequelize } = require("sequelize/types");
-const db = require("../database/db");
-const { dbinfo } = require("../database/db");
-
 module.exports = (dbinfo, Sequelize) => {
     return dbinfo.define(
 
@@ -15,7 +11,8 @@ module.exports = (dbinfo, Sequelize) => {
                 type: Sequelize.DataTypes.STRING(55),
                 allowNull: true
             },
-            timrestamps: true,
+        }, {
+            timestamps: true,
             underscored: true
         }
     );

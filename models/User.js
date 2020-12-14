@@ -1,5 +1,3 @@
-const { dbinfo, Sequelize } = require("../database/db");
-
 module.exports = (dbinfo, Sequelize) => {
     return dbinfo.define(
         "user", {
@@ -10,7 +8,7 @@ module.exports = (dbinfo, Sequelize) => {
             },
             pseudo: {
                 type: Sequelize.DataTypes.STRING(55),
-                allowNull: true
+                allowNull: false
             },
             email: {
                 type: Sequelize.DataTypes.STRING(255),
@@ -18,7 +16,7 @@ module.exports = (dbinfo, Sequelize) => {
                 unique: true
             },
             password: {
-                type: Sequelize.DataTypes.STRING(55),
+                type: Sequelize.DataTypes.STRING,
                 allowNull: false
             },
             forget: {
@@ -27,22 +25,22 @@ module.exports = (dbinfo, Sequelize) => {
             },
             pays: {
                 type: Sequelize.DataTypes.STRING(55),
-                allowNull: true
+                allowNull: false
             },
             sexe: {
                 type: Sequelize.DataTypes.STRING(1),
-                allowNull: true
+                allowNull: false
             },
             image: {
                 type: Sequelize.DataTypes.TEXT,
-                allowNull: true
+                allowNull: false
             },
             status: {
                 type: Sequelize.DataTypes.BOOLEAN,
                 allowNull: true
             }
         }, {
-            timestamps: true,
+            timestamps: false,
             underscored: true
         }
     );

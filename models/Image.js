@@ -1,8 +1,6 @@
-const { dbinfo, Sequelize } = require("../database/db");
-
 module.exports = (dbinfo, Sequelize) => {
     return dbinfo.define(
-        "image", {
+        "img", {
             id: {
                 type: Sequelize.DataTypes.INTEGER,
                 primaryKey: true,
@@ -14,9 +12,9 @@ module.exports = (dbinfo, Sequelize) => {
             },
 
         }, {
-            timestramps: true,
+            timestamps: true,
             underscored: true
         }
 
-    )
-}
+    );
+};

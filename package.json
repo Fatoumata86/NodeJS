@@ -1,25 +1,33 @@
 {
     "name": "nodejs",
     "version": "1.0.0",
+    "description": "",
     "main": "server.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "start": "nodemon server.js"
     },
-    "author": "SOUKOUNA Fatoumata",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Fatoumata86/NodeJS.git"
+    },
+    "author": "Fatoumata SOUKOUNA",
     "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Fatoumata86/NodeJS/issues"
+    },
+    "homepage": "https://github.com/Fatoumata86/NodeJS#readme",
     "dependencies": {
-        "bcrypt": "^3.0.6",
-        "body-parser": "1.15.2",
-        "cors": "2.8.4",
+        "@types/express": "^4.17.9",
+        "bcrypt": "^3.0.8",
+        "body-parser": "^1.15.2",
+        "cors": "^2.8.5",
         "express": "^4.17.1",
         "jsonwebtoken": "7.4.2",
         "mysql2": "^1.6.1",
-        "nodemailer": "^0.7.1",
-        "nodemon": "1.18.4",
-        "sequelize": "4.38.0",
-        "uuid": "^3.4.0"
-    },
-    "devDependencies": {},
-    "description": ""
+        "nodemailer": "^6.4.11",
+        "nodemon": "^1.18.4",
+        "rand-token": "^1.0.1",
+        "sequelize": "4.38.0"
+    }
 }

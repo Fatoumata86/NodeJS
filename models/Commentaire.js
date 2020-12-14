@@ -1,6 +1,3 @@
-const { dbinfo, Sequelize } = require("../database/db");
-const db = require("../database/db");
-
 module.exports = (dbinfo, Sequelize) => {
     return dbinfo.define(
         "commentaire", {

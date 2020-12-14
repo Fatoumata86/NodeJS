@@ -1,5 +1,3 @@
-const { dbinfo, Sequelize } = require("../database/db");
-
 module.exports = (dbinfo, Sequelize) => {
     return dbinfo.define(
         "star", {
@@ -8,21 +6,21 @@ module.exports = (dbinfo, Sequelize) => {
                 primaryKey: true,
                 autoIncremment: true
             },
-            acteur: {
+            nom: {
                 type: Sequelize.DataTypes.STRING(55),
-                allowNull: true
+                allowNull: false
             },
-            actrice: {
+            prenom: {
                 type: Sequelize.DataTypes.STRING(55),
-                allowNull: true
+                allowNull: false
             },
             description: {
                 type: Sequelize.DataTypes.TEXT,
-                allowNull: true
+                allowNull: false
             },
             image: {
                 type: Sequelize.DataTypes.TEXT,
-                allowNull: true
+                allowNull: false
             }
         }, {
             timestamps: true,

@@ -1,5 +1,3 @@
-const { dbinfo, Sequelize } = require("../database/db");
-
 module.exports = (dbinfo, Sequelize) => {
     return dbinfo.define(
         "forum", {
@@ -17,7 +15,7 @@ module.exports = (dbinfo, Sequelize) => {
                 allowNull: true
             }
         }, {
-            timestramps: true,
+            timestamps: true,
             underscored: true
         }
     );
